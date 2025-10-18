@@ -1,1 +1,556 @@
+/* ========== COMING SOON PAGE (FULL STYLES) ========== */
 
+.coming-page {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Header / Navbar */
+.coming-page .navbar {
+    background-color: #111;
+    border-bottom: 2px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+}
+
+.coming-page .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.coming-page .tedx {
+    color: #e62b1e;
+}
+
+.coming-page .youth {
+    color: #fff;
+    font-weight: 700;
+}
+
+.coming-page .subtext {
+    font-size: 0.75rem;
+    color: #bbb;
+}
+
+.coming-page .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.8rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.coming-page .nav-links a:hover {
+    color: #e62b1e;
+}
+
+/* Keyframes for glowing background */
+@keyframes redGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hero Section */
+.coming-page .hero {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, rgba(230, 43, 30, 0.25), transparent 50%),
+        radial-gradient(circle at bottom right, rgba(230, 43, 30, 0.25), transparent 50%);
+}
+
+/* Animated glow layer */
+.coming-page .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, #e62b1e, #8b0000, #e62b1e);
+    background-size: 300% 300%;
+    opacity: 0.15;
+    animation: redGlow 12s ease-in-out infinite;
+    z-index: 0;
+}
+
+/* Hero content */
+.coming-page .hero-content,
+.coming-page .hero-image {
+    position: relative;
+    z-index: 2;
+}
+
+.coming-page .hero-content {
+    max-width: 50%;
+}
+
+.coming-page .hero-content h2 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(230, 43, 30, 0.5);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 8px rgba(230, 43, 30, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 16px rgba(230, 43, 30, 0.9);
+    }
+}
+
+.coming-page .hero-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* Floating animation for the image */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.coming-page .hero-image img {
+    width: 320px;
+    filter: brightness(1.2);
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Footer */
+.coming-page footer {
+    background-color: #111;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 2px solid #222;
+}
+
+.coming-page footer .footer-top h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.coming-page footer .footer-top .tedx {
+    color: #e62b1e;
+}
+
+.coming-page footer .footer-nav {
+    margin-top: 1rem;
+}
+
+.coming-page footer .footer-nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.coming-page footer .footer-nav a:hover {
+    color: #e62b1e;
+}
+
+/* Social icons */
+.coming-page footer .socials {
+    margin-top: 1rem;
+}
+
+.coming-page footer .socials img {
+    width: 22px;
+    margin: 0 8px;
+    filter: invert(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.coming-page footer .socials img:hover {
+    transform: scale(1.2);
+    filter: invert(40%) sepia(100%) saturate(5000%) hue-rotate(-10deg);
+}
+
+/* License text */
+.coming-page footer .license {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .coming-page .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coming-page .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .coming-page .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .coming-page .nav-links a {
+        margin: 0 0.8rem;
+        display: inline-block;
+    }
+}
+
+/* ================================
+   COMING PAGE FOOTER STYLING
+   ================================ */
+.coming-page .footer {
+    background-color: #0d0d0d;
+    color: #f2f2f2;
+    padding: 2rem 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.coming-page .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.coming-page .footer-left h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.coming-page .footer-left .tedx-red,
+.coming-page .footer-left .tedx-x {
+    color: #e62b1e;
+    font-weight: 700;
+}
+
+.coming-page .footer-left .tedx-youth {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.coming-page .footer-subtext {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.coming-page .footer-right {
+    text-align: right;
+}
+
+.coming-page .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.coming-page .footer-links li {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.coming-page .footer-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.coming-page .footer-links a:hover {
+    color: #e62b1e;
+}
+
+.coming-page .footer-divider {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.coming-page .footer-icons a {
+    color: #e0e0e0;
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.coming-page .footer-icons a:hover {
+    color: #e62b1e;
+    transform: scale(1.1);
+}
+
+.coming-page .footer-license {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+.coming-page .hero-image img {
+    transform: scale(1.9);
+    /* visually enlarges without expanding layout */
+    transition: transform 0.3s ease;
+}
+
+/* ===== Sponsors header/footer exact styles for coming page ===== */
+:root {
+  --bg: #000;
+  --panel: #0b0b0b;
+  --panel-2: #111;
+  --text: #ffffff;
+  --muted: #bdbdbd;
+  --line: #1d1d1d;
+  --brand: #e62b1e;
+}
+
+/* Header */
+body.coming-page header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px clamp(20px, 6vw, 80px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.92), rgba(0,0,0,0.88));
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(6px);
+}
+
+body.coming-page header .logo h2 {
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body.coming-page .tedx { 
+  color: var(--brand); 
+  animation: brandGlow 4s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(230, 43, 30, 0.3);
+}
+body.coming-page .youth { color: var(--text); }
+
+@keyframes brandGlow {
+  0% { text-shadow: 0 0 10px rgba(230, 43, 30, 0.3); }
+  100% { text-shadow: 0 0 20px rgba(230, 43, 30, 0.6), 0 0 30px rgba(230, 43, 30, 0.4); }
+}
+
+body.coming-page header .logo p {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body.coming-page header nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.7px;
+  margin-left: clamp(12px, 2.6vw, 28px);
+  opacity: 0.9;
+  transition: color .2s ease, opacity .2s ease;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body.coming-page header nav a:hover { color: var(--brand); opacity: 1; }
+
+/* Mobile hamburger toggle (hidden on desktop) */
+body.coming-page .nav-toggle { display: none; }
+body.coming-page .hamburger { display: none; cursor: pointer; padding: 8px; margin-left: 12px; }
+body.coming-page .hamburger .bar { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; transition: transform .2s ease, opacity .2s ease; }
+
+/* Mobile navigation styles */
+@media (max-width: 768px) {
+  body.coming-page header { padding: 14px 16px; gap: 10px; }
+  body.coming-page header .logo { display: flex; flex-direction: column; flex: 1; }
+
+  /* Full-screen opaque mobile menu */
+  body.coming-page header nav { 
+    position: fixed; 
+    inset: 0; 
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 90px 24px 24px;
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    z-index: 60;
+    overscroll-behavior: contain;
+  }
+  body.coming-page header nav a { margin: 0; font-size: 15px; padding: 12px 8px; border-radius: 10px; }
+  body.coming-page header nav a + a { border-top: 1px solid rgba(255,255,255,0.08); }
+  body.coming-page header nav a:hover { background: rgba(255,255,255,0.06); }
+
+  /* Fixed hamburger button */
+  body.coming-page .hamburger { display: inline-block; z-index: 61; position: fixed; top: 16px; right: 16px; }
+
+  /* Toggle: checkbox checked -> slide nav in */
+  body.coming-page .nav-toggle:checked ~ nav { transform: translateX(0); }
+
+  /* Animate hamburger into an X when open */
+  body.coming-page .nav-toggle:checked + label.hamburger .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  body.coming-page .nav-toggle:checked + label.hamburger .bar:nth-child(2) { opacity: 0; }
+  body.coming-page .nav-toggle:checked + label.hamburger .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+/* Prevent background scroll when menu is open (modern browsers) */
+@supports selector(body:has(.nav-toggle:checked)) {
+  body:has(.nav-toggle:checked) { overflow: hidden; }
+}
+
+/* Footer */
+body.coming-page footer {
+  background: var(--panel-2);
+  border-top: none;
+  margin-top: 0;
+  padding: 42px 6vw 48px;
+  color: var(--muted);
+}
+
+body.coming-page .footer-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(24px, 6vw, 80px);
+}
+body.coming-page .footer-left { flex: 1 1 46%; }
+body.coming-page .footer-right { flex: 1 1 46%; text-align: right; }
+
+body.coming-page .footer-brand {
+  font-size: clamp(28px, 4.6vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+body.coming-page .footer-sub {
+  margin-top: 8px;
+  color: #e6e6e6;
+  font-weight: 600;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+body.coming-page .footer-sub .tedx { 
+  color: var(--brand); 
+  font-weight: 800; 
+  animation: brandGlow 4s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px rgba(230, 43, 30, 0.3);
+}
+
+body.coming-page .footer-nav a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  margin-left: 22px;
+  opacity: 0.9;
+  transition: color .2s ease, opacity .2s ease;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+body.coming-page .footer-nav a:first-child { margin-left: 0; }
+body.coming-page .footer-nav a:hover { color: var(--brand); opacity: 1; }
+
+body.coming-page .footer-divider {
+  display: block;
+  width: 62%;
+  height: 1px;
+  background: rgba(255,255,255,0.32);
+  margin: 12px 0 12px auto;
+  border-radius: 1px;
+}
+
+body.coming-page .footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 auto;
+  width: 62%;
+}
+body.coming-page .footer-social li { display: inline-flex; }
+body.coming-page .footer-social a { color: #cfcfcf; opacity: 0.95; transition: color .2s ease, opacity .2s ease, transform .15s ease; }
+body.coming-page .footer-social a:hover { color: #ffffff; opacity: 1; transform: translateY(-1px); }
+
+body.coming-page footer .license {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #b3b3b3;
+  text-align: center;
+  width: 62%;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  body.coming-page .footer-wrap { flex-direction: column; gap: 20px; }
+  body.coming-page .footer-right { text-align: center; }
+  body.coming-page .footer-divider, 
+  body.coming-page .footer-social, 
+  body.coming-page footer .license { width: 100%; margin-left: 0; }
+  body.coming-page .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+  body.coming-page .footer-nav a { margin: 0; }
+}
+
+/* Smaller navbar and footer overrides for coming soon page */
+body.coming-page header {
+  padding: 14px clamp(16px, 5vw, 60px);
+}
+body.coming-page header .logo h2 {
+  font-size: clamp(16px, 2vw, 22px);
+}
+body.coming-page header .logo p {
+  font-size: 11px;
+}
+body.coming-page header nav a {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  margin-left: clamp(10px, 2vw, 22px);
+}
+
+/* Footer follows sponsors page defaults (no overrides here) */
